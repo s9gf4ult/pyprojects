@@ -6,8 +6,8 @@ print("изначальне моссиве")
 print (a,' \n')
 print("достаем лучеметэ")
 
-for k in range(0, len(a), 1):
-    for i in range(len(a)-1):   # цыкл по выталкиванию наибольшего элемента 
+for k in range(len(a), 0, -1):
+    for i in range(len(a)-1):   # цыкл по выталкиванию наибольшего элемента
         if a[i] > a[i+1]:
             t = a[i]
             a[i] = a[i+1]
