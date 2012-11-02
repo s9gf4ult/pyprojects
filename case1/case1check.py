@@ -3,14 +3,21 @@
 
 import random
 
-def genRandom():
-    return random.sample(range(1000), 100)
+def genRandom(cnt):
+    return random.sample(range(1500), cnt)
     
-def checkResult(a):
-    print "Проверяем ввод:"
+def checkResult(checkF, cnt=100):
+    initial = genRandom(cnt)
+    print "входные данные:"
+    print initial
+    a = checkF(initial)
+    print "результат ввод:"
     print a
     if not isListOfLists(a):
         print "Это должен быть список списоков"
+        return
+    if not isIdenticalElements(initial, a):
+        print "Исходные данные и результат состоят из разного набора элементов"
         return
     if not checkBreak("Элеметны спииска должны быть отсортированы",
                       isSorted,
@@ -21,6 +28,9 @@ def checkResult(a):
                       a):
         return
     print "вроде норм"
+
+def isIdenticalElements(a, b):
+    return sorted(a) == sorted(reduce(lambda x, y: x + y, b))
 
 def checkBreak(mess, func, vals):
     for val, res in zip(vals, map(func, vals)):
