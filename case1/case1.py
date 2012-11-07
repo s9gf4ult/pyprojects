@@ -1,15 +1,16 @@
 import random
-import sys
-a = random.sample(range(1000), 10)
+
+a = random.sample(range(100), 10)
 
 b = sorted(a)
-print (b)
+print(b)
+res = []
+k = 0
 
 for i in range(len(b)-1):
-    if b[i+1] - b[i] <= 50:
-        print ('группа раз')
-        t = (b[i])
-        print(t, '\n')
-    else:
-        print ('группа два')
-        print(b[i])
+    if b[i+1]-b[i] > 5:
+        hui = b[k:i+1]
+        res.append(hui)
+        print(res)
+        print (i)
+        k = i
