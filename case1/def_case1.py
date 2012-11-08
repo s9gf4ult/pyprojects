@@ -18,7 +18,7 @@ def spisok(self):
                 List.pop(0)
             res.append(List)
             k = i
-            z +=
+            z +=0
     print(res)
 
 
