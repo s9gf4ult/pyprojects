@@ -9,8 +9,12 @@ k = 0
 
 for i in range(len(b)-1):
     if b[i+1]-b[i] > 5:
-        hui = b[k:i+1]
-        res.append(hui)
-        print(res)
-        print (i)
+        List = b[k:i+1]
+        if k != 0:
+            List.pop(0)
+        else:
+            pass
+        res.append(List)
         k = i
+        print(res)
+#    k = i
