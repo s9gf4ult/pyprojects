@@ -6,7 +6,7 @@ b = sorted(a)
 print(b)
 res = []
 k = 0
-z = 0 "решения не кошерное
+z = 0    # решения не кошерное
 
 for i in range(len(b)-1):
     if b[i+1]-b[i] > 5:
