@@ -3,13 +3,14 @@ import random
 a = random.sample(range(100), 10)
 
 b = sorted(a)
+r = range(len(b))
 print(b)
 res = []
 k = 0
-z = 0    # решения не кошерное
+z = 0
 
-for i in range(len(b)-1):
-    if b[i+1]-b[i] > 5:
+for i,j in zip(r,r[1:]):
+    if b[j]-b[i] > 5:
         List = b[k:i+1]
         if z == 0:
             pass
