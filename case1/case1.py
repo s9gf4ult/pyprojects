@@ -11,11 +11,11 @@ z = 0
 
 for i,j in zip(r,r[1:]):
     if b[j]-b[i] > 5:
-        List = b[k:i+1]
+        spisok = b[k:i+1]
         if z == 0:
             pass
         else:
-            List.pop(0)
+            spisok.pop(0)
         res.append(List)
         k = i
         z = 1
