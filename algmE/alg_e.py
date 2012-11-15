@@ -1,20 +1,19 @@
-m = 119
+a = input("Input m: ")
+m = int(a)
 
-n = 544
+b = input("Input n: ")
+n = int(b)
 
-
-
-t = m
-m = n
-n = t
-
+if m < n:
+    t = m
+    m = n
+    n = t
 
 while True:
     r = m % n
 
     if r == 0:
-        print ('alarm')
-        print (n)
+        print ('Наибольший делитель равен:', n)
         break
     else:
         m = n
