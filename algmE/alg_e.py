@@ -1,8 +1,6 @@
-a = input("Input m: ")
-m = int(a)
+m = int(input("Input m: "))
 
-b = input("Input n: ")
-n = int(b)
+n = int(input("Input n: "))
 
 if m < n:
     t = m
