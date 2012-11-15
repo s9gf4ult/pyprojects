@@ -2,7 +2,12 @@ m = 119
 
 n = 544
 
-r = m/n
+
+t = m
+m = n
+n = t
+
+r = m % n
 
 if r == 0:
     print ('alarm')
