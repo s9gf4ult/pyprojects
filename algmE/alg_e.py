@@ -13,3 +13,5 @@ if r == 0:
     print ('alarm')
 else:
     print (r)
+    m = n
+    n = r
