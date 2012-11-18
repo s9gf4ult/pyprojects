@@ -1,12 +1,12 @@
 import random
 
-def solve():
+def solve(a):
 
     sp = []
     zero = []
     nonzero = []
 
-    for i in range(10):
+    for i in range(a):
         p = random.randint(-100, 100)
         sp.append(p)
 
@@ -21,4 +21,4 @@ def solve():
     print (nonzero)
 
 if __name__ == '__main__':
-    solve()
+    solve(100)
