@@ -1,6 +1,7 @@
 import random
 
 def solve():
+
     sp = []
     zero = []
     nonzero = []
@@ -19,3 +20,5 @@ def solve():
     print (zero)
     print (nonzero)
 
+if __name__ == '__main__':
+    solve()
