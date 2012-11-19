@@ -16,6 +16,6 @@ while x <= a :
         aspl.append(x)
     if b % x == 0:
         bspl.append(x)
-x = x+1
+    x = x+1
 
 print (aspl, bspl)
