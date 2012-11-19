@@ -13,4 +13,6 @@ for i,j in zip(r,r[1:]):
         spisok = b[k:i+1]
         res.append(spisok)
         k = i+1
-        print(res)
+
+res.append(b[k:])
+print(res)
