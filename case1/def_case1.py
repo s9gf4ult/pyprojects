@@ -1,13 +1,8 @@
-import random
+def spisok(q):
 
-def spisok():
-
-    a = sorted(random.sample(range(100), 10))
-    print (a, '\n')
-
+    a = sorted(q)
     res = []
     k = 0
-    z = 0
 
     for i in range(len(a)-1):
         if a[i+1] - a[i] >5:
@@ -16,5 +11,3 @@ def spisok():
             k = i+1
     res.append(a[k:])
     print(res)
-
-
