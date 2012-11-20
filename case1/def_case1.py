@@ -11,4 +11,4 @@ def spisok(q):
             res.append(sp)
             k = i+1
     res.append(a[k:])
-    print(res)
+    return res
