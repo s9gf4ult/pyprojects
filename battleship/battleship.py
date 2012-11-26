@@ -27,23 +27,30 @@ def random_col(board):
 
 ship_row = random_row(board)
 ship_col = random_col(board)
-guess_row = input("Guess Row:")
-guess_col = input("Guess Col:")
 
-print ship_row
-print ship_col
+turn = 0
+for turn in range(4):
+    print ("Turn: " + str(turn+1))
 
-if guess_row == ship_row and \
-    guess_col == ship_col:
-    print ("Congratulations! You sank \
-            my battleship!")
-else:
-    if 0 < guess_row or guess_row > (len(board)-1) or \
-        0 < guess_col or guess_col > (len(board[0])-1):
-        print "Oops, that's not even in the ocean."
-    elif (board[guess_row][guess_col] == "X"):
-        print "You guessed that one already."
+    guess_row = input("Guess Row:")
+    guess_col = input("Guess Col:")
+
+    print ship_row
+    print ship_col
+
+    if guess_row == ship_row and \
+        guess_col == ship_col:
+        print ("Congratulations! You sunk my battleship!")
+        break
     else:
-        print ("You missed my battleship!")
-        board[guess_row] [guess_col] = "X"
+        if turn == 3:
+            print "Game Over!"
+            if (0 < guess_row or guess_row > 4) or (0 < guess_col or guess_col > 4):
+                print "Oops, that's not even in the ocean."
+            elif (board[guess_row][guess_col] == "X"):
+                print "You guessed that one already."
+            else:
+                print ("You missed my battleship!")
+                board[guess_row] [guess_col] = "X"
     print_board(board)
+    turn +=1
