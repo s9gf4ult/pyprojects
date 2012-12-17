@@ -1,4 +1,4 @@
-Project Euler
+Project Euler - projecteuler.net
 
 analog's:
 
