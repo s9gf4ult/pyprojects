@@ -1,3 +1,8 @@
 Project Euler
 
-analog http://www.spoj.pl
+analog's:
+
+http://www.spoj.pl
+
+http://acmp.ru/?main=tasks
+
