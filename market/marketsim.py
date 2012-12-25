@@ -103,6 +103,7 @@ def buy_sell(action,tiker,cash):
 def func1(tiker):
     for k in range(len(orders)):
         if orders[k][1] == tiker:
+            # close[columns][index]
             print close[tiker][orders[k][0]], orders[k][2]
 func1("AAPL")
 func1("IBM")
